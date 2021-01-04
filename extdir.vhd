@@ -1,0 +1,27 @@
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY ExtensorDirec IS
+
+	PORT (
+	
+		ENTRADA : IN STD_LOGIC_VECTOR(11 DOWNTO 0);
+		
+		SALIDA : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+	
+	);
+
+END ExtensorDirec;
+
+ARCHITECTURE Arquitectura OF ExtensorDirec IS
+
+	SIGNAL MSB : STD_LOGIC_VECTOR(3 DOWNTO 0);
+
+BEGIN
+
+	MSB <= "0000";
+	
+	SALIDA <= MSB & ENTRADA;
+
+END Arquitectura;
+
